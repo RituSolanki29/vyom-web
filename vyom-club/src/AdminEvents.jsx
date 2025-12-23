@@ -17,7 +17,7 @@ const AdminEvents = () => {
   }, []);
 
   const fetchEvents = async () => {
-    const res = await fetch("http://localhost:5000/api/events");
+    const res = await fetch("http://server:5000/api/events");
     const data = await res.json();
     setEvents(data);
   };
@@ -35,7 +35,7 @@ const AdminEvents = () => {
     );
     formData.append("image", image);
 
-    await fetch("http://localhost:5000/api/events", {
+    await fetch("http://server:5000/api/events", {
       method: "POST",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -50,7 +50,7 @@ const AdminEvents = () => {
 
   /* ================= DELETE EVENT ================= */
   const deleteEvent = async (id) => {
-    await fetch(`http://localhost:5000/api/events/${id}`, {
+    await fetch(`http://server:5000/api/events/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -123,7 +123,7 @@ const AdminEvents = () => {
           >
             {/* Image */}
             <img
-              src={`http://localhost:5000/uploads/${event.image}`}
+              src={`http://server:5000/uploads/${event.image}`}
               alt={event.title}
               className="w-full h-48 object-cover"
             />

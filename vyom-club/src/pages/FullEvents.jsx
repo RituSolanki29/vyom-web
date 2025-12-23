@@ -15,7 +15,7 @@ useEffect(() => {
   }, []);
   
   useEffect(() => {
-    fetch("http://localhost:5000/api/events")
+    fetch("http://server:5000/api/events")
       .then((res) => res.json())
       .then(setEvents);
   }, []);
@@ -38,7 +38,7 @@ useEffect(() => {
               className="bg-gray-900/50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
             >
               <img
-                src={`http://localhost:5000/uploads/${event.image}`}
+                src={`http://server:5000/uploads/${event.image}`}
                 alt={event.title}
                 className="h-48 w-full object-cover"
               />

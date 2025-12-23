@@ -60,7 +60,7 @@ function VyomClubWebsite() {
 
     const fetchBlogs = async () => {
         try {
-            const res = await fetch("http://localhost:5000/api/blogs");
+            const res = await fetch("http://server:5000/api/blogs");
             const data = await res.json();
             setBlogPosts(data);
         } catch {
@@ -70,7 +70,7 @@ function VyomClubWebsite() {
 
     const fetchEvents = async () => {
         try {
-            const res = await fetch("http://localhost:5000/api/events");
+            const res = await fetch("http://server:5000/api/events");
             const data = await res.json();
             setProjects(data);
         } catch (err) {
@@ -93,7 +93,7 @@ function VyomClubWebsite() {
   const handleSubmitBlog = async () => {
     if (!newBlog.title || !newBlog.author || !newBlog.content) return;
 
-    const res = await fetch("http://localhost:5000/api/blogs", {
+    const res = await fetch("http://server:5000/api/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBlog)
@@ -107,7 +107,7 @@ function VyomClubWebsite() {
 
 
   const deleteBlog = async (id) => {
-    await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    await fetch(`http://server:5000/api/blogs/${id}`, {
       method: "DELETE",
       headers: { Authorization: localStorage.getItem("adminToken") }
     });
@@ -122,7 +122,7 @@ function VyomClubWebsite() {
 
   const fetchGallery = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/gallery");
+    const res = await fetch("http://server:5000/api/gallery");
     const data = await res.json();
     setGalleryImages(data);
   } catch (err) {
@@ -303,7 +303,7 @@ function VyomClubWebsite() {
                     onClick={() => setSelectedImage(img)}
                 >
                     <img
-                        src={`http://localhost:5000/uploads/${img.image}`}
+                        src={`http://server:5000/uploads/${img.image}`}
                         alt={img.caption}
                         className="w-full h-64 object-cover"
                     />
@@ -344,7 +344,7 @@ function VyomClubWebsite() {
                   onClick={() => setSelectedProject(project)}
                 >
                     <img
-                        src={`http://localhost:5000/uploads/${project.image}`}
+                        src={`http://server:5000/uploads/${project.image}`}
                         alt={project.title}
                         className="w-full h-48 object-cover"
                     />
@@ -789,7 +789,7 @@ function VyomClubWebsite() {
           >
             <div className="max-w-4xl max-h-full w-full max-w-sm sm:max-w-2xl md:max-w-4xl">
               <img
-              src={`http://localhost:5000/uploads/${selectedImage.image}`}
+              src={`http://server:5000/uploads/${selectedImage.image}`}
               alt={selectedImage.caption}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
               />
@@ -806,7 +806,7 @@ function VyomClubWebsite() {
           >
             <div className="bg-gray-900 border border-purple-500/50 rounded-lg max-w-sm sm:max-w-lg md:max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
               <img
-              src={`http://localhost:5000/uploads/${selectedProject.image}`}
+              src={`http://server:5000/uploads/${selectedProject.image}`}
               alt={selectedProject.title}
               className="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg mb-4 sm:mb-6"
               />

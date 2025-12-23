@@ -16,7 +16,7 @@ const FullGallery = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/gallery")
+    fetch("http://server:5000/api/gallery")
       .then((res) => res.json())
       .then(setImages);
   }, []);
@@ -36,7 +36,7 @@ const FullGallery = () => {
             {images.map((img) => (
               <img
                 key={img._id}
-                src={`http://localhost:5000/uploads/${img.image}`}
+                src={`http://server:5000/uploads/${img.image}`}
                 alt={img.caption}
                 className="w-full rounded-xl object-cover shadow-lg hover:shadow-xl transition break-inside-avoid"
               />

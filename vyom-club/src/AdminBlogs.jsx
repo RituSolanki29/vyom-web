@@ -11,7 +11,7 @@ const AdminBlogs = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/blogs");
+      const res = await fetch("http://server:5000/api/blogs");
       const data = await res.json();
       setBlogs(data);
     } catch (err) {
@@ -23,7 +23,7 @@ const AdminBlogs = () => {
     const token = localStorage.getItem("adminToken");
 
     try {
-      await fetch(`http://localhost:5000/api/blogs/${id}`, {
+      await fetch(`http://server:5000/api/blogs/${id}`, {
         method: "DELETE",
         headers: { Authorization: token },
       });

@@ -17,7 +17,7 @@ const FullBlogs = () => {
     });
   }, []);
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch("http://server:5000/api/blogs")
       .then(res => res.json())
       .then(setBlogs);
   }, []);
