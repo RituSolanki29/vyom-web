@@ -568,10 +568,16 @@ function VyomClubWebsite() {
       {/* Mentor Image */}
       <div className="flex justify-center mb-6">
         <img
-          src="src\assets\mentor.jpg"
+          src="/mentor.jpg"
           alt="Manjunath Sir"
           className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
         />
+
+         <img
+                    src="/logo.jpg"
+                    alt="Vyom Club Logo"
+                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain drop-shadow-lg"
+                />
       </div>
 
       {/* Mentor Name */}
