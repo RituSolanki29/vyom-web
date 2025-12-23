@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { API_URL } from "../config/api";
+
 
 const FullGallery = () => {
   const [images, setImages] = useState([]);
@@ -16,7 +18,7 @@ const FullGallery = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://server:5000/api/gallery")
+    fetch(`${API_URL}/api/gallery`)
       .then((res) => res.json())
       .then(setImages);
   }, []);

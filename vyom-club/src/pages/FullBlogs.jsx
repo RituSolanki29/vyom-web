@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { API_URL } from "../config/api";
+
 
 const PREVIEW_LENGTH = 300;
 
@@ -17,7 +19,7 @@ const FullBlogs = () => {
     });
   }, []);
   useEffect(() => {
-    fetch("http://server:5000/api/blogs")
+    fetch(`${API_URL}/api/blogs`)
       .then(res => res.json())
       .then(setBlogs);
   }, []);

@@ -5,9 +5,12 @@ import {
   Mail, Phone, MapPin, Github, Linkedin, Instagram
 } from "lucide-react";
 
+import { API_URL } from "../config/api";
 
 /* ===== ASSETS ===== */
 import qrCode from "./assets/QR-code.jpg";
+import mentorImg from "../assets/mentor.jpg";
+
 
 
 /* ================= MAIN WEBSITE ================= */
@@ -60,7 +63,7 @@ function VyomClubWebsite() {
 
     const fetchBlogs = async () => {
         try {
-            const res = await fetch("http://server:5000/api/blogs");
+            const res = await fetch(`${API_URL}/api/blogs`);
             const data = await res.json();
             setBlogPosts(data);
         } catch {
@@ -70,7 +73,7 @@ function VyomClubWebsite() {
 
     const fetchEvents = async () => {
         try {
-            const res = await fetch("http://server:5000/api/events");
+            const res = await fetch(`${API_URL}/api/events`);
             const data = await res.json();
             setProjects(data);
         } catch (err) {
@@ -93,7 +96,7 @@ function VyomClubWebsite() {
   const handleSubmitBlog = async () => {
     if (!newBlog.title || !newBlog.author || !newBlog.content) return;
 
-    const res = await fetch("http://server:5000/api/blogs", {
+    const res = await fetch(`${API_URL}/api/blogs`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBlog)
@@ -107,7 +110,7 @@ function VyomClubWebsite() {
 
 
   const deleteBlog = async (id) => {
-    await fetch(`http://server:5000/api/blogs/${id}`, {
+    await fetch(`${API_URL}/api/blogs/${id}`, {
       method: "DELETE",
       headers: { Authorization: localStorage.getItem("adminToken") }
     });
@@ -122,7 +125,7 @@ function VyomClubWebsite() {
 
   const fetchGallery = async () => {
   try {
-    const res = await fetch("http://server:5000/api/gallery");
+    const res = await fetch(`${API_URL}/api/gallery`);
     const data = await res.json();
     setGalleryImages(data);
   } catch (err) {
@@ -303,7 +306,7 @@ function VyomClubWebsite() {
                     onClick={() => setSelectedImage(img)}
                 >
                     <img
-                        src={`http://server:5000/uploads/${img.image}`}
+                        src={`${API_URL}/uploads/${img.image}`}
                         alt={img.caption}
                         className="w-full h-64 object-cover"
                     />
@@ -344,9 +347,9 @@ function VyomClubWebsite() {
                   onClick={() => setSelectedProject(project)}
                 >
                     <img
-                        src={`http://server:5000/uploads/${project.image}`}
+                        src={`${API_URL}/uploads/${project.image}`}
                         alt={project.title}
-                        className="w-full h-48 object-cover"
+                        className="w-full h-48 objlect-cover"
                     />
 
 
@@ -568,7 +571,7 @@ function VyomClubWebsite() {
       {/* Mentor Image */}
       <div className="flex justify-center mb-6">
         <img
-          src="/mentor.jpg"
+          src={mentorImg} 
           alt="Manjunath Sir"
           className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
         />
@@ -795,7 +798,7 @@ function VyomClubWebsite() {
           >
             <div className="max-w-4xl max-h-full w-full max-w-sm sm:max-w-2xl md:max-w-4xl">
               <img
-              src={`http://server:5000/uploads/${selectedImage.image}`}
+              src={`${API_URL}/uploads/${selectedImage.image}`}
               alt={selectedImage.caption}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
               />
@@ -812,7 +815,7 @@ function VyomClubWebsite() {
           >
             <div className="bg-gray-900 border border-purple-500/50 rounded-lg max-w-sm sm:max-w-lg md:max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
               <img
-              src={`http://server:5000/uploads/${selectedProject.image}`}
+              src={`${API_URL}/uploads/${selectedProject.image}`}
               alt={selectedProject.title}
               className="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg mb-4 sm:mb-6"
               />

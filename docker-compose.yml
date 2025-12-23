@@ -17,4 +17,6 @@ services:
       - "5173:80"
     depends_on:
       - server
+    environment:
+      - VITE_API_URL=http://vyom-server:5000
     restart: always

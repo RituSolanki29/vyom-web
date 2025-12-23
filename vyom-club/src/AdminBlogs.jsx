@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { API_URL } from "../config/api";
 
 
 const AdminBlogs = () => {
@@ -11,7 +12,7 @@ const AdminBlogs = () => {
 
   const fetchBlogs = async () => {
     try {
-      const res = await fetch("http://server:5000/api/blogs");
+      const res = await fetch(`${API_URL}/api/blogs`);
       const data = await res.json();
       setBlogs(data);
     } catch (err) {
@@ -23,7 +24,7 @@ const AdminBlogs = () => {
     const token = localStorage.getItem("adminToken");
 
     try {
-      await fetch(`http://server:5000/api/blogs/${id}`, {
+      await fetch(`${API_URL}/api/blogs/${id}`, {
         method: "DELETE",
         headers: { Authorization: token },
       });

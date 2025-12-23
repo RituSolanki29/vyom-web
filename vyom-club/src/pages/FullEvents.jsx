@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { API_URL } from "../config/api";
+
 
 const FullEvents = () => {
   const [events, setEvents] = useState([]);
@@ -15,7 +17,7 @@ useEffect(() => {
   }, []);
   
   useEffect(() => {
-    fetch("http://server:5000/api/events")
+    fetch(`${API_URL}/api/events`)
       .then((res) => res.json())
       .then(setEvents);
   }, []);

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, Users } from "lucide-react";
+import { API_URL } from "../config/api";
+
 
 const AdminEvents = () => {
   const [events, setEvents] = useState([]);
@@ -17,7 +19,7 @@ const AdminEvents = () => {
   }, []);
 
   const fetchEvents = async () => {
-    const res = await fetch("http://server:5000/api/events");
+    const res = await fetch(`${API_URL}/api/events`);
     const data = await res.json();
     setEvents(data);
   };
@@ -35,7 +37,7 @@ const AdminEvents = () => {
     );
     formData.append("image", image);
 
-    await fetch("http://server:5000/api/events", {
+    await fetch(`${API_URL}/api/events`, {
       method: "POST",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -50,7 +52,7 @@ const AdminEvents = () => {
 
   /* ================= DELETE EVENT ================= */
   const deleteEvent = async (id) => {
-    await fetch(`http://server:5000/api/events/${id}`, {
+    await fetch(`${API_URL}/api/events/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -123,7 +125,7 @@ const AdminEvents = () => {
           >
             {/* Image */}
             <img
-              src={`http://server:5000/uploads/${event.image}`}
+              src={`${API_URL}/uploads/${event.image}`}
               alt={event.title}
               className="w-full h-48 object-cover"
             />

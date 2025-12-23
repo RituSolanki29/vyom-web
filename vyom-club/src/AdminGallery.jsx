@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { API_URL } from "../config/api";
+
 
 const AdminGallery = () => {
   const [images, setImages] = useState([]);
@@ -10,7 +12,7 @@ const AdminGallery = () => {
   }, []);
 
   const fetchGallery = async () => {
-    const res = await fetch("http://server:5000/api/gallery");
+    const res = await fetch(`${API_URL}/api/gallery`);
     const data = await res.json();
     setImages(data);
   };
@@ -22,7 +24,7 @@ const AdminGallery = () => {
     formData.append("image", file);
     formData.append("caption", caption);
 
-    await fetch("http://server:5000/api/gallery", {
+    await fetch(`${API_URL}/api/gallery`, {
       method: "POST",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -36,7 +38,7 @@ const AdminGallery = () => {
   };
 
   const deleteImage = async (id) => {
-    await fetch(`http://server:5000/api/gallery/${id}`, {
+    await fetch(`${API_URL}/api/gallery/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: localStorage.getItem("adminToken")
@@ -126,7 +128,7 @@ const AdminGallery = () => {
                        border border-purple-500/30 shadow-lg"
           >
             <img
-              src={`http://server:5000/uploads/${img.image}`}
+              src={`${API_URL}/uploads/${img.image}`}
               alt={img.caption}
               className="w-full h-64 object-cover"
             />
