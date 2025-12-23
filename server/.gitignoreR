@@ -1,0 +1,14 @@
+# frontend
+vyom-club/node_modules
+vyom-club/dist
+vyom-club/.env
+vyom-club/.vite
+
+# backend
+server/node_modules
+server/.env
+server/uploads
+
+# OS files
+.DS_Store
+Thumbs.db

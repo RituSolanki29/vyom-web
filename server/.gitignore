@@ -1,0 +1,13 @@
+# dependencies
+node_modules
+
+# env files
+.env
+
+# uploads (optional – depends on your use case)
+uploads
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
