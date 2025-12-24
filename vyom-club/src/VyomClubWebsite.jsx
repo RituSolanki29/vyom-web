@@ -5,11 +5,14 @@ import {
   Mail, Phone, MapPin, Github, Linkedin, Instagram
 } from "lucide-react";
 
-import { API_URL } from "../config/api";
+import { API_URL } from "./config/api";
+
 
 /* ===== ASSETS ===== */
 import qrCode from "./assets/QR-code.jpg";
-import mentorImg from "../assets/mentor.jpg";
+import mentor from "./assets/mentor.jpg";
+
+
 
 
 
@@ -571,8 +574,8 @@ function VyomClubWebsite() {
       {/* Mentor Image */}
       <div className="flex justify-center mb-6">
         <img
-          src={mentorImg} 
-          alt="Manjunath Sir"
+          src={mentor} 
+          alt="Mentor"
           className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
         />
 

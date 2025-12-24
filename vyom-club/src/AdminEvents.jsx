@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Calendar, Users } from "lucide-react";
-import { API_URL } from "../config/api";
+import { API_URL } from "./config/api";
+
 
 
 const AdminEvents = () => {

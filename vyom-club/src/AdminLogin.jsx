@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_URL } from "../config/api";
+import { API_URL } from "./config/api";
 
 
 const AdminLogin = () => {
