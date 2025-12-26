@@ -561,38 +561,32 @@ function VyomClubWebsite() {
     </div>
 
     {/* Our Mentor */}
-<div className="mb-20">
-  <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-    Our Mentor
-  </h3>
+    <div className="mb-20">
+      <h3 className="text-3xl sm:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Our Mentor
+      </h3>
 
-  <div className="max-w-md mx-auto">
-    <div className="bg-gray-900/60 backdrop-blur-md border border-purple-500/30 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+      <div className="max-w-md mx-auto">
+        <div className="bg-gray-900/60 backdrop-blur-md border border-purple-500/30 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300">
 
-      {/* Mentor Image */}
-      <div className="flex justify-center mb-6">
-        <img
-          src={mentor}
-          alt="Mentor"
-          className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
-        />
+        {/* Mentor Image */}
+          <div className="flex justify-center mb-6">
+            <img
+              src={mentor}
+              alt="Mentor"
+              className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
+            />
+          </div>
 
-         <img
-                    src="/logo.jpg"
-                    alt="Vyom Club Logo"
-                    className="w-8 h-8 lg:w-10 lg:h-10 object-contain drop-shadow-lg"
-                />
-      </div>
+          {/* Mentor Name */}
+          <h4 className="text-xl sm:text-2xl font-semibold text-center text-purple-300 mb-2">
+            Manjunath Sir
+          </h4>
 
-      {/* Mentor Name */}
-      <h4 className="text-xl sm:text-2xl font-semibold text-center text-purple-300 mb-2">
-        Manjunath Sir
-      </h4>
-
-      {/* Role */}
-      <p className="text-sm sm:text-base text-center text-purple-200 mb-4 tracking-wide">
-        Faculty Advisor · Department of Physics
-      </p>
+          {/* Role */}
+          <p className="text-sm sm:text-base text-center text-purple-200 mb-4 tracking-wide">
+            Faculty Advisor · Department of Physics
+          </p>
 
       {/* Divider */}
       <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-4 rounded-full"></div>

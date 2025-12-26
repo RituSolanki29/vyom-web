@@ -8,7 +8,6 @@ RUN npm install
 COPY . .
 
 # DEBUG: show env file
-RUN echo "----- ENV FILE -----" && cat .env
 
 RUN npm run build   # <-- env is read HERE
 

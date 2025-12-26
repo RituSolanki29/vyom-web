@@ -40,7 +40,7 @@ useEffect(() => {
               className="bg-gray-900/50 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
             >
               <img
-                src={`http://server:5000/uploads/${event.image}`}
+                src={`${API_URL}/uploads/${event.image}`}
                 alt={event.title}
                 className="h-48 w-full object-cover"
               />
