@@ -11,9 +11,7 @@ import { API_URL } from "./config/api";
 /* ===== ASSETS ===== */
 import qrCode from "./assets/QR-code.jpg";
 import mentor from "./assets/mentor.jpg";
-
-
-
+console.log("API URL =", import.meta.env.VITE_API_URL);
 
 
 /* ================= MAIN WEBSITE ================= */
@@ -574,7 +572,7 @@ function VyomClubWebsite() {
       {/* Mentor Image */}
       <div className="flex justify-center mb-6">
         <img
-          src={mentor} 
+          src={mentor}
           alt="Mentor"
           className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-4 border-purple-400/30 shadow-md"
         />

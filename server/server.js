@@ -9,7 +9,6 @@ import adminRoutes from "./routes/admin.js";
 import eventRoutes from "./routes/events.js";
 
 
-
 dotenv.config();
 
 /* =======================
