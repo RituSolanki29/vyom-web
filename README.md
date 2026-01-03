@@ -15,8 +15,16 @@ It also includes an **Admin Panel** that allows authorized users to manage conte
 ---
 
 ## 🧩 Project Structure
-###1️⃣ Backend (Express + MongoDB Atlas)
-###2️⃣ Frontend (React + Nginx)
+
+### 1️⃣ Backend (Express + MongoDB Atlas)
+- Handles API requests and business logic  
+- Manages authentication and authorization  
+- Connects to MongoDB Atlas for data storage  
+
+### 2️⃣ Frontend (React + Nginx)
+- Built using React for the user interface  
+- Uses Nginx to serve the production build  
+- Communicates with the backend via REST APIs  
 
 ---
 
