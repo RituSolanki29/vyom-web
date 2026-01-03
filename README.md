@@ -15,6 +15,8 @@ It also includes an **Admin Panel** that allows authorized users to manage conte
 ---
 
 ## 🧩 Project Structure
+###1️⃣ Backend (Express + MongoDB Atlas)
+###2️⃣ Frontend (React + Nginx)
 
 ---
 
