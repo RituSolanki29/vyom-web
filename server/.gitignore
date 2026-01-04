@@ -1,15 +1,16 @@
-# dependencies
-node_modules
+# Dependencies
+node_modules/
 
-# env files
+# Environment variables
 .env
 
-# uploads (optional – depends on your use case)
-uploads
+# Uploads (optional – depends on your use case)
+uploads/
 
+# Admin creation script (do not commit)
 createAdmin.js
 
-# logs
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
