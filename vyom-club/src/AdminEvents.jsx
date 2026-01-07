@@ -126,7 +126,7 @@ const AdminEvents = () => {
           >
             {/* Image */}
             <img
-              src={`${API_URL}/uploads/${event.image}`}
+              src={`/uploads/${event.image}`}
               alt={event.title}
               className="w-full h-48 object-cover"
             />

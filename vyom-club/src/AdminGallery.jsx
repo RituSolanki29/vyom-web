@@ -129,7 +129,7 @@ const AdminGallery = () => {
                        border border-purple-500/30 shadow-lg"
           >
             <img
-              src={`${API_URL}/uploads/${img.image}`}
+              src={`/uploads/${img.image}`}
               alt={img.caption}
               className="w-full h-64 object-cover"
             />
