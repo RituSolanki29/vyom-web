@@ -129,7 +129,7 @@ const AdminGallery = () => {
                        border border-purple-500/30 shadow-lg"
           >
             <img
-              src={`/uploads/${img.image}`}
+              src={`https://vyom-95wm.onrender.com/uploads/${img.image}`}
               alt={img.caption}
               className="w-full h-64 object-cover"
             />
