@@ -126,7 +126,7 @@ const AdminEvents = () => {
           >
             {/* Image */}
             <img
-              src={`https://vyom-95wm.onrender.com/uploads/${event.image}`}
+              src={`${API_URL}/uploads/${event.image}`}
               alt={event.title}
               className="w-full h-48 object-cover"
             />

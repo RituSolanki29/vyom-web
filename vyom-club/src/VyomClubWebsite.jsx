@@ -307,7 +307,7 @@ function VyomClubWebsite() {
                     onClick={() => setSelectedImage(img)}
                 >
                     <img
-                        src={`https://vyom-95wm.onrender.com/uploads/${img.image}`}
+                        src={`${API_URL}/uploads/${img.image}`}
                         alt={img.caption}
                         className="w-full h-64 object-cover"
                     />
@@ -348,7 +348,7 @@ function VyomClubWebsite() {
                   onClick={() => setSelectedProject(project)}
                 >
                     <img
-                        src={`https://vyom-95wm.onrender.com/uploads/${project.image}`}
+                        src={`${API_URL}/uploads/${project.image}`}
                         alt={project.title}
                         className="w-full h-48 objlect-cover"
                     />
@@ -793,7 +793,7 @@ function VyomClubWebsite() {
           >
             <div className="max-w-4xl max-h-full w-full max-w-sm sm:max-w-2xl md:max-w-4xl">
               <img
-              src={`https://vyom-95wm.onrender.com/uploads/${selectedImage.image}`}
+              src={`${API_URL}/uploads/${selectedImage.image}`}
               alt={selectedImage.caption}
               className="max-w-full max-h-[80vh] object-contain rounded-lg"
               />
@@ -810,7 +810,7 @@ function VyomClubWebsite() {
           >
             <div className="bg-gray-900 border border-purple-500/50 rounded-lg max-w-sm sm:max-w-lg md:max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
               <img
-              src={`https://vyom-95wm.onrender.com/uploads/${selectedProject.image}`}
+              src={`${API_URL}/uploads/${selectedProject.image}`}
               alt={selectedProject.title}
               className="w-full h-48 sm:h-64 md:h-72 object-cover rounded-lg mb-4 sm:mb-6"
               />
