@@ -5,7 +5,7 @@ const eventSchema = new mongoose.Schema({
   description: String,
   date: String,
   contributors: String,
-  image: String,
+  image: { type: String, required: true },
 }, { timestamps: true });
 
 export default mongoose.model("Event", eventSchema);

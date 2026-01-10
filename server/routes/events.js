@@ -39,11 +39,12 @@ router.post(
         description,
         date,
         contributors,
-        image: req.file.filename
+        image: req.file.path, // ✅ CLOUDINARY URL
       });
 
       res.status(201).json(event);
     } catch (err) {
+      console.error(err);
       res.status(500).json({ message: "Failed to create event" });
     }
   }
