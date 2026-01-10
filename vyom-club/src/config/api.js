@@ -1,4 +1,1 @@
-// src/config/api.js
-export const API_URL = "https://vyom-95wm.onrender.com";
-
-
+export const API_URL = import.meta.env.VITE_API_URL;
