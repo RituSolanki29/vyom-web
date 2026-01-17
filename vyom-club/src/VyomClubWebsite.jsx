@@ -299,6 +299,7 @@ function VyomClubWebsite() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {galleryImages.map((img) => (
+                
                 <div
                     key={img._id}
                     className="group relative overflow-hidden rounded-xl 
@@ -308,9 +309,11 @@ function VyomClubWebsite() {
                 >
                     <img
                         src={img.image}
+                        
                         alt={img.caption}
                         className="w-full h-64 object-cover"
                     />
+                    
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent 
                             opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition flex items-end p-6">
@@ -342,6 +345,7 @@ function VyomClubWebsite() {
             </h2>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {projects.map((project) => (
+                
                 <div
                   key={project._id}
                   className="bg-gray-900/50 border border-purple-500/30 rounded-lg sm:rounded-xl overflow-hidden hover:border-purple-500 transition-all duration-300 cursor-pointer transform hover:scale-105 shadow-lg hover:shadow-xl"
