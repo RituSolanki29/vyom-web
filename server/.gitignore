@@ -4,11 +4,11 @@ node_modules/
 # Environment variables
 .env
 
-# Uploads (optional – depends on your use case)
+# Uploads (local only, not for production)
 uploads/
 
-# Admin creation script (do not commit)
-createAdmin.js
+# Admin / utility scripts (do not commit)
+scripts/
 
 # Logs
 npm-debug.log*
