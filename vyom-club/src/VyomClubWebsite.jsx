@@ -752,12 +752,13 @@ function VyomClubWebsite() {
     {/* Creator Credit */}
     <div className="mt-10 text-center text-sm text-gray-400">
       Designed & Developed by{" "}
-    <button
-      onClick={() => navigate("/admin")}
-      className="text-purple-400 font-semibold hover:text-purple-500 transition"
-    >
-      Riya Solanki
-    </button>
+    <span
+  onClick={() => navigate("/admin")}
+  className="text-purple-400 font-semibold hover:text-purple-500 transition cursor-pointer"
+>
+  Riya Solanki
+</span>
+
 </div>
 
 
