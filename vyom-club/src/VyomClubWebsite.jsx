@@ -170,29 +170,37 @@ function VyomClubWebsite() {
               </span>
             </div>
 
-            
-            {/* Desktop Navigation + Admin Button */}
-            <div className="hidden md:flex items-center space-x-1">
-              {navLinks.map(({ id, label }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className="relative px-3 py-2 text-sm font-medium transition-all duration-300 group hover:text-purple-400"
-                >
-                {label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300 origin-left" />
-              </button>
-            ))}
+            {/* Desktop Navigation */}
+<div className="hidden md:flex items-center space-x-1">
+  {navLinks.map(({ id, label }) => (
+    <button
+      key={id}
+      onClick={() => scrollToSection(id)}
+      className="relative px-3 py-2 text-sm font-medium transition-all duration-300 group hover:text-purple-400"
+    >
+      {label}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300 origin-left" />
+    </button>
+  ))}
+</div>
+
+{/* Mobile Menu Toggle (visible only on mobile) */}
+<div className="md:hidden">
+  <button
+    className="text-white p-2"
+    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  >
+    {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+  </button>
+</div>
 
 
             
-            <button
-              className="text-white p-1"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+           
+
+
+            
+           
         </div>
       </div>
 
