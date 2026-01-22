@@ -184,24 +184,7 @@ function VyomClubWebsite() {
               </button>
             ))}
 
-            {/* Admin Login Button - Desktop */}
-            <button
-              onClick={handleAdminLogin}
-              className="ml-4 px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-purple-400/50"
-            >
-              {isAdmin ? 'Admin' : 'Admin Login'}
-            </button>
-          </div>
 
-             {/* Mobile menu button */}
-          <div className="flex items-center md:hidden space-x-2">
-            {/* Admin Login Button - Mobile */}
-            <button
-              onClick={handleAdminLogin}
-              className="px-3 py-1.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
-            >
-              {isAdmin ? 'Admin' : 'Admin'}
-            </button>
             
             <button
               className="text-white p-1"
@@ -217,14 +200,6 @@ function VyomClubWebsite() {
       {mobileMenuOpen && (
         <div className="md:hidden bg-black/95 border-t border-purple-500/20 backdrop-blur-xl">
           <div className="px-4 py-6 space-y-4">
-            {/* Admin Login Button - Mobile Menu */}
-            <button
-              onClick={handleAdminLogin}
-              className="w-full py-3 px-4 text-lg font-semibold bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl transition-all hover:from-purple-700 hover:to-pink-700 border-l-4 border-transparent hover:border-purple-400 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              {isAdmin ? 'Admin Panel' : 'Admin Login'}
-            </button>
-            
             {navLinks.map(({ id, label }) => (
               <button
                 key={id}
@@ -298,8 +273,7 @@ function VyomClubWebsite() {
                 </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {galleryImages.map((img) => (
-                
+                {galleryImages.slice(0, 3).map((img) => (
                 <div
                     key={img._id}
                     className="group relative overflow-hidden rounded-xl 
@@ -344,7 +318,7 @@ function VyomClubWebsite() {
               Projects & Events
             </h2>
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {projects.map((project) => (
+              {projects.slice(0, 3).map((project) => (
                 
                 <div
                   key={project._id}
@@ -433,7 +407,7 @@ function VyomClubWebsite() {
               </div>
             )}
 
-            {blogPosts.map(blog => (
+            {blogPosts.slice(0, 3).map(blog => (
               <div 
                 key={blog._id} 
                 className="bg-gray-800 p-6 rounded-lg mb-6"
@@ -589,7 +563,7 @@ function VyomClubWebsite() {
 
           {/* Role */}
           <p className="text-sm sm:text-base text-center text-purple-200 mb-4 tracking-wide">
-            Faculty Advisor · Department of Physics
+            Club Mentor · Department of Physics
           </p>
 
       {/* Divider */}
@@ -743,7 +717,7 @@ function VyomClubWebsite() {
       {/* Phone */}
       <div className="flex items-center gap-4 group">
         <Phone className="text-purple-400 flex-shrink-0" size={20} />
-        <a href="tel:+919876543210" className="text-gray-300 hover:text-purple-400 transition-colors font-medium">
+        <a className="text-gray-300 hover:text-purple-400 transition-colors font-medium">
           +91 8341717162
         </a>
       </div>
@@ -777,11 +751,15 @@ function VyomClubWebsite() {
 
     {/* Creator Credit */}
     <div className="mt-10 text-center text-sm text-gray-400">
-        Designed & Developed by{" "}
-        <span className="text-purple-400 font-semibold">
-            Riya Solanki
-        </span>
-    </div>
+      Designed & Developed by{" "}
+    <button
+      onClick={() => navigate("/admin")}
+      className="text-purple-400 font-semibold hover:text-purple-500 transition"
+    >
+      Riya Solanki
+    </button>
+</div>
+
 
 
   </div>
